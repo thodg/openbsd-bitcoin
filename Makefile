@@ -21,6 +21,7 @@ MAINTAINER =	Thomas de Grivel <thoxdg@gmail.com>
 PERMIT_PACKAGE_CDROM =	Yes
 
 WANTLIB += ${COMPILER_LIBCXX} event m
+BUILD_DEPENDS+=	coin/db48
 
 COMPILER = ports-gcc
 
