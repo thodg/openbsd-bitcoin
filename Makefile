@@ -21,6 +21,10 @@ MAINTAINER =	Thomas de Grivel <thoxdg@gmail.com>
 PERMIT_PACKAGE_CDROM =	Yes
 
 WANTLIB += ${COMPILER_LIBCXX} event m
+WANTLIB += boost_system-mt boost_filesystem-mt boost_program_options-mt
+WANTLIB += boost_thread-mt boost_chrono-mt
+WANTLIB += ssl crypto
+
 BUILD_DEPENDS+=	coin/db48
 
 COMPILER = ports-gcc
