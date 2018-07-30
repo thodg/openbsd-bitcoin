@@ -20,6 +20,7 @@ MAINTAINER =	Thomas de Grivel <thoxdg@gmail.com>
 # MIT
 PERMIT_PACKAGE_CDROM =	Yes
 
+LIB_DEPENDS+=	devel/boost
 WANTLIB += ${COMPILER_LIBCXX} event m
 WANTLIB += boost_system-mt boost_filesystem-mt boost_program_options-mt
 WANTLIB += boost_thread-mt boost_chrono-mt
