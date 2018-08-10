@@ -28,7 +28,7 @@ WANTLIB += ssl crypto
 
 BUILD_DEPENDS+=	coin/db48
 
-COMPILER = ports-gcc
+COMPILER = base-clang
 
 CONFIGURE_STYLE =	gnu
 
@@ -36,7 +36,7 @@ CONFIGURE_ARGS =	--with-gui=no \
 			--with-unsupported-ssl \
 			CXXFLAGS="-O2 -pipe -I/usr/local/include/db4.8 -I/usr/local/include" \
 			LIBS="-L/usr/local/lib/db4.8 -ldb_cxx-4.8" \
-			CC=egcc CXX=eg++
+			CC=cc CXX=c++
 
 MAKE_ENV =		AUTOCONF_VERSION=2.69 \
 			AUTOMAKE_VERSION=1.15

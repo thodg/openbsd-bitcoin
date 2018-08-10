@@ -1,0 +1,12 @@
+#!/bin/ksh
+#
+# $OpenBSD: $
+
+daemon="/usr/local/bin/bitcoind"
+daemon_flags="-daemon -datadir=/var/bitcoin/.bitcoin -dbcache=100 -maxmempool=100"
+daemon_timeout=600
+daemon_user=_bitcoind
+
+. /etc/rc.d/rc.subr
+
+rc_cmd $1
