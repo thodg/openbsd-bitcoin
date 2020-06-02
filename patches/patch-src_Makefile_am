@@ -1,0 +1,11 @@
+--- src/Makefile.am~	Wed Mar  4 13:13:02 2020
++++ src/Makefile.am	Tue Jun  2 17:01:20 2020
+@@ -634,7 +634,7 @@
+ libbitcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+ libbitcoinconsensus_la_LIBADD = $(LIBSECP256K1)
+ libbitcoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+-libbitcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
++libbitcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS)
+ 
+ endif
+ #

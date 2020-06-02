@@ -2,7 +2,7 @@
 
 COMMENT =	Peer to peer money system
 
-VER =		0.16.1
+VER =		0.19.1
 DISTNAME =	bitcoin-${VER}
 PKGNAME =	bitcoin-${VER}
 CATEGORIES =	coin
@@ -18,30 +18,33 @@ HOMEPAGE =	https://github.com/bitcoin/bitcoin/
 MAINTAINER =	Thomas de Grivel <thoxdg@gmail.com>
 
 # MIT
-PERMIT_PACKAGE_CDROM =	Yes
+PERMIT_PACKAGE =	Yes
 
+LIB_DEPENDS+=	coin/db48
 LIB_DEPENDS+=	devel/boost
 WANTLIB += ${COMPILER_LIBCXX} event m
 WANTLIB += boost_system-mt boost_filesystem-mt boost_program_options-mt
 WANTLIB += boost_thread-mt boost_chrono-mt
 WANTLIB += ssl crypto
 
-BUILD_DEPENDS+=	coin/db48
+LIB_DEPENDS+=	coin/db48
 
 COMPILER = base-clang
 
 CONFIGURE_STYLE =	gnu
 
-CONFIGURE_ARGS =	--with-gui=no \
-			--with-unsupported-ssl \
+CONFIGURE_ARGS =	--with-unsupported-ssl \
 			CXXFLAGS="-O2 -pipe -I/usr/local/include/db4.8 -I/usr/local/include" \
-			LIBS="-L/usr/local/lib/db4.8 -ldb_cxx-4.8" \
+			LIBS="-L/usr/local/lib/db4.8 -ldb_cxx-4.8 -L/usr/X11R6/lib" \
 			CC=cc CXX=c++
 
 MAKE_ENV =		AUTOCONF_VERSION=2.69 \
 			AUTOMAKE_VERSION=1.15
 
 USE_GMAKE = Yes
+
+pre-configure:
+	cd ${WRKSRC} && ./autogen.sh
 
 post-install:
 	cd ${WRKSRC}/src/secp256k1 && make install
