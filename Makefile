@@ -2,16 +2,16 @@
 
 COMMENT =	Peer to peer money system
 
-VER =		0.20.0
+VER =		0.20.1
 DISTNAME =	bitcoin-${VER}
 PKGNAME =	bitcoin-${VER}
 CATEGORIES =	coin
 MASTER_SITES =	https://bitcoincore.org/bin/bitcoin-core-${VER}/
 EXTRACT_SUFX =	.tar.gz
 
-SHARED_LIBS+=	bitcoinconsensus	  0.0
-SHARED_LIBS+=	secp256k1		  0.0
-SHARED_LIBS+=	univalue		100.3
+SHARED_LIBS+=	bitcoinconsensus	  3.0 # 0.0
+SHARED_LIBS+=	secp256k1		  0.0 # 0.0
+SHARED_LIBS+=	univalue		  0.0 # 100.3
 
 HOMEPAGE =	https://github.com/bitcoin/bitcoin/
 
