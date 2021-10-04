@@ -1,9 +1,9 @@
---- configure.ac~	Wed Mar  4 13:13:02 2020
-+++ configure.ac	Tue Jun  2 16:57:56 2020
-@@ -761,7 +761,6 @@
-   AX_CHECK_LINK_FLAG([[-Wl,--high-entropy-va]], [HARDENED_LDFLAGS="$HARDENED_LDFLAGS -Wl,--high-entropy-va"])
-   AX_CHECK_LINK_FLAG([[-Wl,-z,relro]], [HARDENED_LDFLAGS="$HARDENED_LDFLAGS -Wl,-z,relro"])
-   AX_CHECK_LINK_FLAG([[-Wl,-z,now]], [HARDENED_LDFLAGS="$HARDENED_LDFLAGS -Wl,-z,now"])
+--- /usr/ports/pobj/bitcoin-0.21.0/bitcoin-0.21.0/configure.ac.orig	Wed Jan 13 22:52:34 2021
++++ /usr/ports/pobj/bitcoin-0.21.0/bitcoin-0.21.0/configure.ac	Sat Feb  6 15:37:56 2021
+@@ -840,7 +840,6 @@
+   AX_CHECK_LINK_FLAG([[-Wl,-z,relro]], [HARDENED_LDFLAGS="$HARDENED_LDFLAGS -Wl,-z,relro"],, [[$LDFLAG_WERROR]])
+   AX_CHECK_LINK_FLAG([[-Wl,-z,now]], [HARDENED_LDFLAGS="$HARDENED_LDFLAGS -Wl,-z,now"],, [[$LDFLAG_WERROR]])
+   AX_CHECK_LINK_FLAG([[-Wl,-z,separate-code]], [HARDENED_LDFLAGS="$HARDENED_LDFLAGS -Wl,-z,separate-code"],, [[$LDFLAG_WERROR]])
 -  AX_CHECK_LINK_FLAG([[-fPIE -pie]], [PIE_FLAGS="-fPIE"; HARDENED_LDFLAGS="$HARDENED_LDFLAGS -pie"],, [[$CXXFLAG_WERROR]])
  
    case $host in

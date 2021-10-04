@@ -1,4 +1,4 @@
---- src/Makefile.am~	Wed Mar  4 13:13:02 2020
+--- src/Makefile.am.orig	Wed Mar  4 13:13:02 2020
 +++ src/Makefile.am	Tue Jun  2 17:01:20 2020
 @@ -634,7 +634,7 @@
  libbitcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
