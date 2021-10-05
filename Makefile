@@ -2,7 +2,7 @@
 
 COMMENT =	Peer to peer money system
 
-VER =		0.21.0
+VER =		0.21.1
 DISTNAME =	bitcoin-${VER}
 PKGNAME =	bitcoin-${VER}
 CATEGORIES =	coin

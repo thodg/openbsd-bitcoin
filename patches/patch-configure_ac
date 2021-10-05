@@ -1,5 +1,5 @@
---- /usr/ports/pobj/bitcoin-0.21.0/bitcoin-0.21.0/configure.ac.orig	Wed Jan 13 22:52:34 2021
-+++ /usr/ports/pobj/bitcoin-0.21.0/bitcoin-0.21.0/configure.ac	Sat Feb  6 15:37:56 2021
+--- configure.ac.orig	Mon Oct  4 21:15:46 2021
++++ configure.ac	Mon Oct  4 21:16:30 2021
 @@ -840,7 +840,6 @@
    AX_CHECK_LINK_FLAG([[-Wl,-z,relro]], [HARDENED_LDFLAGS="$HARDENED_LDFLAGS -Wl,-z,relro"],, [[$LDFLAG_WERROR]])
    AX_CHECK_LINK_FLAG([[-Wl,-z,now]], [HARDENED_LDFLAGS="$HARDENED_LDFLAGS -Wl,-z,now"],, [[$LDFLAG_WERROR]])
